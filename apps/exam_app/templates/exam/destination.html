@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Add Plan</title>
+    </head>
+    <body>
+        <a href = '/exam_app/dashboard'>Home</a>
+        <a href = '/exam_app'>Logout</a>
+        <h1>{{trip.destination}}</h1>
+        <p>Planned By: {{owner.username}}</p>
+        <p>Description: {{trip.desc}}</p>
+        <p>Travel Date From: {{trip.datefrom}}</p>
+        <p>Travel Date To: {{trip.dateto}}</p>
+        <h2>Other user's joining the trip:</h2>
+        {% for user in tripusers %}
+            <p>{{user.username}}</p>
+        {% endfor %}
+    </body>
+</html>
